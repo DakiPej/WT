@@ -1,1 +1,1 @@
-Novosti o automobilima
+Stranica sa novostima iz automobilske industrije
