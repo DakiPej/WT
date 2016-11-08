@@ -16,12 +16,19 @@ Svi uoceni bug-ovi su ispravljeni.
 
 ## V  - Lista fajlova u formatu NAZIVFAJLA
 index.html - pocetna podstranica stranice na kojoj se nalaze najvaznije i najnovije vijesti
+
 pregledAuta.html - podstranica koja sadrzi clanke o informacijama odredjenih modela auta, kao i dodatne opreme i sl.
+
 info.html - podstranica sa informacijama
+
 prijaviSe.html - podstranica sa formom za prijavu korisnika
+
 uclaniSe.html - podstranica sa formom za kreiranje novog korisnickog racuna
+
 GT350R.html - podstranica koja predstavlja primjer izgleda podstranice za nove vijesti i pregled auta
 
+
 Css dokument je kreiran ponaosob za svaki .html dokument.
+
 
 Folder *Pictures* sadrzi sve potrebne slike koje su se koristile u .html dokumentima. 
