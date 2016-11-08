@@ -1,0 +1,63 @@
+*{
+	box-sizing: border-box;
+  font-family: "Open Sans";
+  margin: 0 0 0 0;
+}
+body{
+  width: 100%;
+  margin: 0 0 0 0;
+  font-size: 30px;
+  min-width: 300px;
+}
+
+.top{
+  display: block;
+  width: 100%;
+}
+.top>img{
+  width: 100%;
+  opacity: 0.5;
+}
+
+.menu{
+  text-align: center;
+  background-color: black;
+  width: 100%;
+}
+.menu li{
+  margin-right: 20px;
+	display: inline-block;
+}
+.menu a:hover{
+	color: red;
+}
+.menu a{
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+.main{
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+.main>h1{
+	margin-top: 2%;
+	width: 100%;
+	text-align: center;
+}
+.main>p{
+	width: 100%;
+	text-align: center;
+	font-size: 25px;
+	text-align: justify;
+}
+.links{
+	margin-top: 2%;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 2%;
+}
+.links li{
+	list-style: none;
+}
