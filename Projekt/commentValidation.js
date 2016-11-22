@@ -84,6 +84,16 @@ function subscribeV() {
     _test = 1;
   }
 
+    var mail = document.forms["signUp"]["mail"].value;
+    var mailR = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+    if (mail == "" || mail == undefined || !mailR.test(mail)) {
+      var tmp = document.getElementById("mail");
+      tmp.style.backgroundColor = "red";
+      document.getElementById("validation").innerHTML += "Mail nije ispravan (something@examlple.com)";
+      _test = 1;
+    }
+
+
   if(_test == 1){return false;}
   return true;
 }
