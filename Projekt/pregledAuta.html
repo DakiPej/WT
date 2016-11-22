@@ -8,6 +8,26 @@
   </head>
 
   <body>
+    <script type="text/javascript" src="commentValidation.js"></script>
+    <script type="text/javascript" src="loadPage.js"></script>
+    <script type="text/javascript" src="gallery.js"></script>
+    <script type="text/javascript" src="modal.js"></script>
+    <script type="text/javascript">
+      document.onkeydown = function(evt) {
+        evt = evt || window.event;
+        var isEscape = false;
+          if ("key" in evt) {
+            isEscape = (evt.key == "Escape" || evt.key == "Esc");
+          } else {
+            isEscape = (evt.keyCode == 27);
+          }
+          if (isEscape) {
+            document.getElementById("myModal").style.display = "none";
+          }
+      };
+    </script>
+
+<div id="page">
 
     <div class="top">
       <img src="pictures/Wallpaper2.jpg"/>
@@ -15,10 +35,10 @@
 
     <div class="menu">
       <ul>
-        <li><a id="Test" href="index.html">NOVOSTI</a></li>
-        <li><a id="Test" href="pregledAuta.html">PREGLED AUTA</a></li>
-        <li><a id="Test" href="info.html">INFO</a></li>
-        <li><a id="Test" href="prijaviSe.html">PRIJAVI SE</a></li>
+        <li><a onclick="loadDiv('index.html')" href="#">NOVOSTI</a></li>
+        <li><a onclick="loadDiv('pregledAuta.html')" href="#">PREGLED AUTA</a></li>
+        <li><a onclick="loadDiv('info.html')" href="#">INFO</a></li>
+        <li><a onclick="loadDiv('prijaviSe.html')" href="#">PRIJAVI SE</a></li>
       </ul>
     </div>
 
@@ -60,6 +80,7 @@
           </div>
         </div>
       </div>
+    </div>
 
     </div>
   </body>

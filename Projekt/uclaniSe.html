@@ -2,12 +2,34 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="prijaviSe.css">
+    <link name= "link" rel="stylesheet" type="text/css" href="prijaviSe.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <title>Car Magazine</title>
   </head>
 
   <body>
+    <script type="text/javascript" src="commentValidation.js"></script>
+    <script type="text/javascript" src="changeColor.js"></script>
+    <script type="text/javascript" src="loadPage.js"></script>
+    <script type="text/javascript" src="gallery.js"></script>
+    <script type="text/javascript" src="modal.js"></script>
+    <script type="text/javascript">
+      document.onkeydown = function(evt) {
+        evt = evt || window.event;
+        var isEscape = false;
+          if ("key" in evt) {
+            isEscape = (evt.key == "Escape" || evt.key == "Esc");
+          } else {
+            isEscape = (evt.keyCode == 27);
+          }
+          if (isEscape) {
+            document.getElementById("myModal").style.display = "none";
+          }
+      };
+    </script>
+
+    <div id="page">
+
 
     <div class="top">
       <img src="pictures/Wallpaper4.jpg"/>
@@ -15,16 +37,16 @@
 
     <div class="menu">
       <ul>
-        <li><a id="Test" href="index.html">NOVOSTI</a></li>
-        <li><a id="Test" href="pregledAuta.html">PREGLED AUTA</a></li>
-        <li><a id="Test" href="info.html">INFO</a></li>
-        <li><a id="Test" href="prijaviSe.html">PRIJAVI SE</a></li>
+        <li><a onclick="loadDiv('index.html')" href="#">NOVOSTI</a></li>
+        <li><a onclick="loadDiv('pregledAuta.html')" href="#">PREGLED AUTA</a></li>
+        <li><a onclick="loadDiv('info.html')" href="#">INFO</a></li>
+        <li><a onclick="loadDiv('prijaviSe.html')" href="#">PRIJAVI SE</a></li>
       </ul>
     </div>
 
-    <div class="main">
+    <div class="main" id="main">
       <div class="subscribe">
-        <form class="signIn" action="index.html" method="post">
+        <form name="signUp" class="signUp" action="#" onsubmit="return subscribeV()" method="post">
           <div class="label">
               <label for="ime">Ime:</label><br>
               <label for="prezime">Prezime:</label><br>
@@ -36,22 +58,26 @@
           </div>
 
           <div class="input">
-            <input type="text" name="ime" value=""><br>
-            <input type="text" name="prezime" value=""><br>
-            <input type="text" name="grad" value=""><br>
-            <input type="text" name="adresa" value=""><br>
-            <input type="text" name="korisnickoIme" value=""><br>
-            <input type="password" name="lozinka" value=""><br>
-            <input type="text" name="mail" value=""><br>
+            <input id="ime" type="text" name="ime" value="" onkeydown="changeColor(this);"><br>
+            <input id="prezime" type="text" name="prezime" value="" onkeydown="changeColor(this);"><br>
+            <input id="grad" type="text" name="grad" value="" onkeydown="changeColor(this);"><br>
+            <input id="adresa" type="text" name="adresa" value="" onkeydown="changeColor(this);"><br>
+            <input id="korisnickoIme" type="text" name="korisnickoIme" value="" onkeydown="changeColor(this);"><br>
+            <input id="lozinka" type="password" name="lozinka" value="" onkeydown="changeColor(this);"><br>
+            <input id="mail" type="text" name="mail" value="" onkeydown="changeColor(this);"><br>
           </div>
 
           <div class="button">
+            <div id="validation">
+
+            </div>
             <input type="submit" value="Potvrdi"></button>
           </div>
         </form>
 
       </div>
-
     </div>
+    </div>
+
   </body>
 </html>

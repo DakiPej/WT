@@ -7,9 +7,29 @@
     <title>Car Magazine</title>
   </head>
 
-
-
   <body>
+    <script type="text/javascript" src="commentValidation.js"></script>
+    <script type="text/javascript" src="changeColor.js"></script>
+    <script type="text/javascript" src="loadPage.js"></script>
+    <script type="text/javascript" src="gallery.js"></script>
+    <script type="text/javascript" src="modal.js"></script>
+    <script type="text/javascript">
+      document.onkeydown = function(evt) {
+        evt = evt || window.event;
+        var isEscape = false;
+          if ("key" in evt) {
+            isEscape = (evt.key == "Escape" || evt.key == "Esc");
+          } else {
+            isEscape = (evt.keyCode == 27);
+          }
+          if (isEscape) {
+            document.getElementById("myModal").style.display = "none";
+          }
+      };
+    </script>
+
+    <div id="page">
+
 
     <div class="top">
       <img src="pictures/Wallpaper4.jpg"/>
@@ -17,33 +37,34 @@
 
     <div class="menu">
       <ul>
-        <li><a id="Test" href="index.html">NOVOSTI</a></li>
-        <li><a id="Test" href="pregledAuta.html">PREGLED AUTA</a></li>
-        <li><a id="Test" href="info.html">INFO</a></li>
-        <li><a id="Test" href="prijaviSe.html">PRIJAVI SE</a></li>
+        <li><a onclick="loadDiv('index.html')" href="#">NOVOSTI</a></li>
+        <li><a onclick="loadDiv('pregledAuta.html')" href="#">PREGLED AUTA</a></li>
+        <li><a onclick="loadDiv('info.html')" href="#">INFO</a></li>
+        <li><a onclick="loadDiv('prijaviSe.html')" href="#">PRIJAVI SE</a></li>
       </ul>
     </div>
 
     <div class="main">
-      <form class="signeUp" action="index.html" method="post">
-        <div class="subscribe">
+      <form name="signIn" class="signIn" action="#" onsubmit="return signInV()" method="post">
           <div class="label">
-            <label for="mail">E-mail:</label><br>
+            <label for="username">Korisnicko ime:</label><br>
             <label for="lozinka">Lozinka: </label><br>
           </div>
 
           <div class="input">
-            <input type="text" name="mail" value=""><br>
-            <input type="password" name="lozinka" value=""><br>
+            <input id="username" type="text" name="username" value="" onkeydown="changeColor(this);"><br>
+            <input id="lozinka" type="password" name="lozinka" value="" onkeydown="changeColor(this);"><br>
           </div>
+
+          <div id="validation"></div>
 
           <div class="button">
             <input type="submit" value="Potvrdi"></button>
           </div>
-        </div>
       </form>
-      <a href="uclaniSe.html">Kreirajte novi korisnički račun</a>
+      <a onclick="loadDiv('uclaniSe.html')" href="#">Kreirajte novi korisnički račun</a>
 
+    </div>
     </div>
   </body>
 </html>

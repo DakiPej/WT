@@ -58,6 +58,8 @@ body{
 	text-align: center;
 	margin-bottom: 2%;
 }
-.links li{
+.links ul li{
+text-align: center;
 	list-style: none;
+	width: 100%;
 }

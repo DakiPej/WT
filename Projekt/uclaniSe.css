@@ -36,6 +36,9 @@ body{
   text-decoration: none;
   color: white;
 }
+.menu>p{
+	color: white;
+}
 .main{
   margin-left: auto;
   margin-right: auto;

@@ -5,9 +5,33 @@
     <link rel="stylesheet" type="text/css" href="GT350R.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <title>Car Magazine</title>
+    <style media="screen">
+      .demo{cursor: pointer;}
+    </style>
   </head>
 
   <body>
+    <script type="text/javascript" src="changeColor.js"></script>
+    <script type="text/javascript" src="commentValidation.js"></script>
+    <script type="text/javascript" src="loadPage.js"></script>
+    <script type="text/javascript" src="gallery.js"></script>
+    <script type="text/javascript" src="modal.js"></script>
+    <script type="text/javascript">
+      document.onkeydown = function(evt) {
+        evt = evt || window.event;
+        var isEscape = false;
+          if ("key" in evt) {
+            isEscape = (evt.key == "Escape" || evt.key == "Esc");
+          } else {
+            isEscape = (evt.keyCode == 27);
+          }
+          if (isEscape) {
+            document.getElementById("myModal").style.display = "none";
+          }
+      };
+    </script>
+
+    <div id="page">
 
     <div class="top">
       <img src="pictures/Wallpaper1.jpg"/>
@@ -15,17 +39,56 @@
 
     <div class="menu">
       <ul>
-        <li><a id="Test" href="index.html">NOVOSTI</a></li>
-        <li><a id="Test" href="pregledAuta.html">PREGLED AUTA</a></li>
-        <li><a id="Test" href="info.html">INFO</a></li>
-        <li><a id="Test" href="prijaviSe.html">PRIJAVI SE</a></li>
+        <li><a onclick="loadDiv('index.html')" href="#">NOVOSTI</a></li>
+        <li><a onclick="loadDiv('pregledAuta.html')" href="#">PREGLED AUTA</a></li>
+        <li><a onclick="loadDiv('info.html')" href="#">INFO</a></li>
+        <li><a onclick="loadDiv('prijaviSe.html')" href="#">PRIJAVI SE</a></li>
       </ul>
     </div>
 
     <div class="newsElement">
-        <div class="elementPicture">
-          <img src="pictures/GT350R.jpg"/>
+
+      <div class="gallery">
+
+        <div id="myModal" class="modal">
+          <div class="buttons">
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+          </div>
+
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+          </div>
+
+          <img class="modal-content" id="img01">
         </div>
+
+        <div class="gallerySlide">
+
+          <div class="gallerySlide_4">
+            <img class="demo opacity" src="pictures/GT350R.jpg" style="width:100%" onmouseover="currentDiv(1)" onmouseout="hide(1)" onclick="f(this)">
+          </div>
+
+          <div class="gallerySlide_4">
+            <img class="demo opacity" src="pictures/GT350R_1.jpg" style="width:100%" onmouseover="currentDiv(2)" onmouseout="hide(2)" onclick="f(this)">
+          </div>
+
+          <div class="gallerySlide_4">
+            <img class="demo opacity" src="pictures/GT350R_2.jpg" style="width:100%" onmouseover="currentDiv(3)" onmouseout="hide(3)" onclick="f(this)">
+          </div>
+
+          <div class="gallerySlide_4">
+            <img class="demo opacity" src="pictures/GT350R_4.jpg" style="width:100%" onmouseover="currentDiv(4)" onmouseout="hide(4)" onclick="f(this)">
+          </div>
+        </div>
+
+        <img class="slides" src="pictures/GT350R.jpg" onclick="f(this)">
+        <img class="slides" src="pictures/GT350R_1.jpg" onclick="f(this)">
+        <img class="slides" src="pictures/GT350R_2.jpg" onclick="f(this)">
+        <img class="slides" src="pictures/GT350R_4.jpg" onclick="f(this)">
 
         <div class="elementTitle">
           <p>
@@ -84,20 +147,21 @@
 
     <div class="comments">
       <div class="leaveComment">
-        <form class="formComment" action="#top" method="post">
+        <form class="formComment" name="formComment" action="#" onsubmit="return commentV();" method="post">
           <div class="commentRow">
             <label>Korisnicko ime</label>
             <br>
-            <input type="text" name="username">
+            <input type="text" name="username" onkeydown="changeColor(this);" required>
             <br>
           </div>
           <div class="commentRow">
             <label>Komentar</label>
             <br>
-            <textarea name="commentText" rows="8" cols="60"></textarea>
+            <textarea name="commentText" rows="8" cols="40" onkeydown="changeColor(this);" required></textarea>
             <br>
           </div>
           <div class="commentRow">
+            <div id="validation">   </div>
             <input type="submit" name="Posalji" value="Posalji">
           </div>
         </form>
@@ -106,6 +170,7 @@
       <div class="allComments">
       </div>
     </div>
+   </div>
 
   </body>
 </html>
