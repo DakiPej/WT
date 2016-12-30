@@ -12,3 +12,9 @@ function ucitajVijestText(id) {
   xmlhttp.open("POST", "ucitajVijestText.php?username="+username+"&pass="+pass+"&id="+id, true);
   xmlhttp.send();
 }
+
+function odjaviSe(){
+  localStorage['username'] = "";
+  localStorage['pass'] = "";
+  alert("Odjevljeni ste");
+}
