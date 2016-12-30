@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<news>
+  
+  <container>
+    <id>vijest_2</id>
+    <img>pictures/Camaro.jpg</img>
+    <p>Camaro u utrci za prijestoljem</p>
+    <text>Primjer teksta vijesti ciji je naslov "Camaro u utrci za prijestoljem"</text>
+  </container>
+  <container>
+    <id>vijest_3</id>
+    <img>pictures/LandRover.jpg</img>
+    <p>Kako se Land Rover snalazi u pustinji?</p>
+    <text>Primjer teksta vijesti ciji je naslov "Kako se Land Rover snalazi u pustinji?"</text>
+  </container>
+  <container>
+    <id>vijest_4</id>
+    <img>pictures/Vanquish.jpg</img>
+    <p>Sta dobro dolazi iz UK?</p>
+    <text>Primjer teksta vijesti ciji je naslov "Sta to dobro dolazi iz UK"</text>
+  </container>
+  <container>
+    <id>vijest_5</id>
+    <img>pictures/Huracan.jpg</img>
+    <p>Prvi Huracan na Olx.ba</p>
+    <text>Primjer teksta vijesti ciji je naslov "Prvi Huracan na Olx.ba"</text>
+  </container>
+  <container>
+    <id>vijest_6</id>
+    <img>pictures/8c.jpg</img>
+    <p>Slika govori tisucu rijeci</p>
+    <text>Primjer teksta vijesti ciji je naslov "Slika govori tisucu rijeci"</text>
+  </container>
+</news>

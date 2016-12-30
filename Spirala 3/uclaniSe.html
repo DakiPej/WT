@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link name= "link" rel="stylesheet" type="text/css" href="prijaviSe.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <title>Car Magazine</title>
+  </head>
+
+  <body>
+    <script type="text/javascript" src="commentValidation.js"></script>
+    <script type="text/javascript" src="changeColor.js"></script>
+    <script type="text/javascript" src="uclaniSe.js"></script>
+
+    <div id="page">
+
+    <div class="top">
+      <img src="pictures/Wallpaper4.jpg"/>
+    </div>
+
+    <div class="menu">
+      <ul>
+        <li><a href="index.html">NOVOSTI</a></li>
+        <li><a href="pregledAuta.html">PREGLED AUTA</a></li>
+        <li><a href="info.html">INFO</a></li>
+        <li><a href="prijaviSe.html">PRIJAVI SE</a></li>
+      </ul>
+    </div>
+
+    <div class="main" id="main">
+      <div class="subscribe">
+        <form name="signUp" class="signUp" onsubmit="return subscribeV()" method="post">
+          <div class="label">
+              <label for="ime">Ime:</label><br>
+              <label for="prezime">Prezime:</label><br>
+              <label for="grad">Grad:</label><br>
+              <label for="adresa">Adresa:</label><br>
+              <label for="korisnickoIme">Korisničko ime:</label><br>
+              <label for="lozinka">Lozinka: </label><br>
+              <label for="mail">E-mail:</label><br>
+          </div>
+
+          <div class="input">
+            <input id="ime" type="text" name="ime" value="" onkeydown="changeColor(this);"><br>
+            <input id="prezime" type="text" name="prezime" value="" onkeydown="changeColor(this);"><br>
+            <input id="grad" type="text" name="grad" value="" onkeydown="changeColor(this);"><br>
+            <input id="adresa" type="text" name="adresa" value="" onkeydown="changeColor(this);"><br>
+            <input id="korisnickoIme" type="text" name="korisnickoIme" value="" onkeydown="changeColor(this);"><br>
+            <input id="lozinka" type="password" name="lozinka" value="" onkeydown="changeColor(this);"><br>
+            <input id="mail" type="text" name="mail" value="" onkeydown="changeColor(this);"><br>
+          </div>
+
+          <div class="button">
+            <div id="validation">
+
+            </div>
+            <input type="submit" value="Potvrdi" onclick="uclaniSe()">
+          </div>
+        </form>
+
+      </div>
+    </div>
+    </div>
+
+  </body>
+</html>

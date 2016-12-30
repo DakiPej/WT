@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="GT350R.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <title>Car Magazine</title>
+    <style media="screen">
+      .demo{cursor: pointer;}
+    </style>
+  </head>
+
+  <body>
+    <script type="text/javascript" src="changeColor.js"></script>
+    <script type="text/javascript" src="commentValidation.js"></script>
+    <script type="text/javascript" src="loadPage.js"></script>
+    <script type="text/javascript" src="gallery.js"></script>
+    <script type="text/javascript" src="modal.js"></script>
+    <script type="text/javascript">
+      document.onkeydown = function(evt) {
+        evt = evt || window.event;
+        var isEscape = false;
+          if ("key" in evt) {
+            isEscape = (evt.key == "Escape" || evt.key == "Esc");
+          } else {
+            isEscape = (evt.keyCode == 27);
+          }
+          if (isEscape) {
+            document.getElementById("myModal").style.display = "none";
+          }
+      };
+    </script>
+
+    <div id="page">
+
+    <div class="top">
+      <img src="pictures/Wallpaper1.jpg"/>
+    </div>
+
+    <div class="menu">
+      <ul>
+        <li><a href="index.html">NOVOSTI</a></li>
+        <li><a href="pregledAuta.html">PREGLED AUTA</a></li>
+        <li><a href="info.html">INFO</a></li>
+        <li><a href="prijaviSe.html">PRIJAVI SE</a></li>
+      </ul>
+    </div>
+
+    <div class="newsElement">
+
+      <div class="gallery">
+
+        <div id="myModal" class="modal">
+          <div class="buttons">
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+          </div>
+
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+          </div>
+
+          <img class="modal-content" id="img01">
+        </div>
+
+        <div class="gallerySlide">
+
+          <div class="gallerySlide_4">
+            <img class="demo opacity" src="pictures/GT350R.jpg" style="width:100%" onmouseover="currentDiv(1)" onmouseout="hide(1)" onclick="f(this)">
+          </div>
+
+          <div class="gallerySlide_4">
+            <img class="demo opacity" src="pictures/GT350R_1.jpg" style="width:100%" onmouseover="currentDiv(2)" onmouseout="hide(2)" onclick="f(this)">
+          </div>
+
+          <div class="gallerySlide_4">
+            <img class="demo opacity" src="pictures/GT350R_2.jpg" style="width:100%" onmouseover="currentDiv(3)" onmouseout="hide(3)" onclick="f(this)">
+          </div>
+
+          <div class="gallerySlide_4">
+            <img class="demo opacity" src="pictures/GT350R_4.jpg" style="width:100%" onmouseover="currentDiv(4)" onmouseout="hide(4)" onclick="f(this)">
+          </div>
+        </div>
+
+        <img class="slides" src="pictures/GT350R.jpg" onclick="f(this)">
+        <img class="slides" src="pictures/GT350R_1.jpg" onclick="f(this)">
+        <img class="slides" src="pictures/GT350R_2.jpg" onclick="f(this)">
+        <img class="slides" src="pictures/GT350R_4.jpg" onclick="f(this)">
+
+        <div class="elementTitle">
+          <p>
+            NOVI MUSTANG SHELBY OD 526bhp!
+          </p>
+        </div>
+
+        <div class="elementText">
+          <p>
+            It starts with the crankshaft. In most cars, the crank is just a chunk of cast iron spinning away in the block.
+            In the Shelby GT350, though, the crank is the soul of the machine. It’s steel that’s forged and gun-drilled down its
+            centerline to shave mass and relieve crankcase pressure. To that esti­mable piece of metal are attached eight
+            connecting rods, the four crank throws spaced at 180-degree intervals instead of the traditional 90. This is more
+            profoundly important than it might sound.
+          </p>
+
+          <p>
+            Upstairs in the block, a plasma-transferred wire-arc process finishes the aluminum bores with a rugged iron skin,
+            100 microns at a time. The largest possible 94.0-mm bore helps bump displacement from the Mustang GT’s 5.0 liters to
+            5.2 in the Shelby, allowing bigger valves (hollow-stem intake, sodium-filled exhaust) atop this aluminum lung.
+          </p>
+
+          <p>
+            All of this—the flat-plane crank, the ruthlessly excised rotating mass, the deep-breathing heads—speaks to wide-band,
+            high-rpm horsepower. This so-called Voodoo engine is built for a track, and not the kind with a Christmas tree and
+            a burnout box. This is the heart of a road-course stormer, hand-built by a two-person team on a moving line. If the
+             whistle blows and an engine’s not done, the team punches out and finishes it the next day. This is not the type of
+             attention typically lavished on a $50,000 car. Or, let’s just say it: a Mustang.
+          </p>
+
+          <p>
+            The GT350 is more than an amped-up GT. Designers lowered the hood for better aerodynamics, and they threw in a
+            carbon-composite radiator-core support that’s so pretty it doesn’t need a beauty cover, thus saving 1.9 pounds. New
+            front fenders swell over a track that’s an inch wider than a Mustang GT’s, accommodating front rubber that ranges from
+            fat (295/35-19 on the GT350) to morbidly obese (305/30-19 for the R). Throw in optional MagneRide dampers, six-piston
+            front Brembos, and Recaro cloth seats and you’re not nearly done with the Shelby upgrades. If you tried to build a
+            GT into a GT350, your list of part numbers would look like the NSA’s phone records.
+          </p>
+
+          <p>
+            All those performance components, honed and tuned and machined, take the Shelby nameplate in an entirely surprising
+             direction. Shelby’s eponymous cars, right up through the most recent GT500, were manifestations of his
+             personality—over-the-top, belligerent, and entertaining, if not enlightening. These Shelbys, though, are holistic
+             performers in the European idiom, emphasizing specific output, low unsprung weight, shift feel, and other muscle-car
+              heresies.
+          </p>
+
+          <p>
+            What would Shelby have thought of a flat-plane crank? The latest cars to bear his name sound not like a Ferrari or a
+             Mustang but like a Mustang racing a Ferrari. It’s a glorious noise, an 8250-rpm declaration of new fundamentals. In an
+             era of engineering homogeneity, of subtle variations on familiar themes, the GT350 and GT350R are radical departures.
+              These are not just unlike any other Mustang. They’re not like any other car, period.
+          </p>
+        </div>
+    </div>
+
+    <div class="comments">
+      <div class="leaveComment">
+        <form class="formComment" name="formComment" action="#" onsubmit="return commentV();" method="post">
+          <div class="commentRow">
+            <label>Korisnicko ime</label>
+            <br>
+            <input type="text" name="username" onkeydown="changeColor(this);" required>
+            <br>
+          </div>
+          <div class="commentRow">
+            <label>Komentar</label>
+            <br>
+            <textarea name="commentText" rows="8" cols="40" onkeydown="changeColor(this);" required></textarea>
+            <br>
+          </div>
+          <div class="commentRow">
+            <div id="validation">   </div>
+            <input type="submit" name="Posalji" value="Posalji">
+          </div>
+        </form>
+      </div>
+
+      <div class="allComments">
+      </div>
+    </div>
+   </div>
+
+  </body>
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<user>
+  <password>25d55ad283aa400af464c76d713c07ad</password>
+  <ime>admin</ime>
+  <prezime>admin</prezime>
+  <grad>Sarajevo</grad>
+  <adresa>Adresa</adresa>
+  <email>nesto@example.com</email>
+  <role>admin</role>
+</user>
