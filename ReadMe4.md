@@ -24,3 +24,10 @@ XMLBaza.php - prebacuje sve iz XMLa u bazu
 
 RESTService.php - servis za vracanje vijesti sa naslovom, tekstom i autorom
 
+#DODATAK 
+
+REST servisu se prosljedjuje parametar "param" (opcionalno) za prikupljanje vijesti odredjenog autora.
+REST servis vraca podatke o naslovima, autorima i tekstovima vijesti. U slucaju da se proslijedi i parametar "param"
+koji treba da ima naziv nekog autora, vracaju se podaci o vijestima proslijedenog autora. 
+
+Prilozene su 3 screenshota u folderu "REST_Service_Screenshot" koji demonstriraju rad ovog servisa.
