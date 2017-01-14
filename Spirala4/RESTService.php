@@ -7,7 +7,12 @@ function zag() {
 function rest_get($request, $data) {
   $veza = new PDO("mysql:dbname=carmagazine;host=localhost;charset=utf8", "Daki", "12345678");
   $veza->exec("set names utf8");
-  $vijesti = $veza->prepare("select naslov, tekst, autor from vijesti");
+  $sqlquery="select naslov, tekst, autor from vijesti";
+  if(isset($_REQUEST['param'])){
+    $sqlquery=$sqlquery." where autor ='".$_REQUEST['param']."';";
+  }
+  $vijesti = $veza->prepare($sqlquery);
+
   $vijesti->execute();
   $data = array();
   foreach ($vijesti as $v) {
