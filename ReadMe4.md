@@ -11,6 +11,7 @@ pomocu klika na dugme koje je moguce vidjeti na dnu stranice index.html samo ako
 Sve .php skripte (osim skripte za citanje hotVijesti) citaju/snimaju podatke iz/u bazu podataka.
 
 Napravljen je hosting stranice na OpenShift (bez baze podataka)
+link: http://carmagazine-carmagazine.44fs.preview.openshiftapps.com/Spirala4/index.html
 
 Napravljena je metoda REST koja vraca podatke u obliku JSON-a (testirano u REST.html)
 
