@@ -5,7 +5,7 @@ function zag() {
     header('Access-Control-Allow-Origin: *');
 }
 function rest_get($request, $data) {
-  $veza = new PDO("mysql:dbname=carmagazine;host=localhost;charset=utf8", "Daki", "12345678");
+  $veza = new PDO("mysql:dbname=".getenv("MYSQL_DATABASE").";host=".getenv("MYSQL_SERVICE_HOST"), getenv("MYSQL_USER"), getenv("MYSQL_PASSWORD"));
   $veza->exec("set names utf8");
   $sqlquery="select naslov, tekst, autor from vijesti";
   if(isset($_REQUEST['param'])){
