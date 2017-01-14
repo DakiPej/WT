@@ -21,3 +21,8 @@ Web servis nije testiran koristenjem POSTMAN-a
 
 
 ## V  - Lista fajlova u formatu NAZIVFAJLA
+
+XMLBaza.php - prebacuje sve iz XMLa u bazu
+
+RESTService.php - servis za vracanje vijesti sa naslovom, tekstom i autorom
+
