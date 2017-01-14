@@ -3,7 +3,7 @@
   $username = $_GET['u'];
   $password = md5($_GET['l']);
 
-  $veza = new PDO("mysql:dbname=carmagazine;host=//mysql:3306/;charset=utf8", "Daki", "12345678");
+  $veza = new PDO("mysql:dbname=carmagazine;host=172.30.15.242;charset=utf8", "Daki", "12345678");
   $veza->exec("set names utf8");
 
   $korisnici = $veza->prepare("select * from user where username = '".$username."' and lozinka = '".$password."'");
