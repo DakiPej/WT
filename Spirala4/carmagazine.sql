@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 14, 2017 at 04:27 PM
+-- Generation Time: Jan 14, 2017 at 06:41 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `carmagazine`
 --
+CREATE DATABASE IF NOT EXISTS `carmagazine` DEFAULT CHARACTER SET utf8 COLLATE utf8_slovenian_ci;
+USE `carmagazine`;
 
 -- --------------------------------------------------------
 
@@ -33,6 +35,16 @@ CREATE TABLE `komentari` (
   `autor` varchar(15) COLLATE utf8_slovenian_ci NOT NULL,
   `vrijeme` timestamp NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci;
+
+--
+-- Dumping data for table `komentari`
+--
+
+INSERT INTO `komentari` (`id`, `id_vijest`, `tekst`, `autor`, `vrijeme`) VALUES
+(1, 1, 'ovo je komentar', 'user', '2017-01-14 18:36:37'),
+(2, 1, 'ovo je jos jedan komentar', 'Sura', '2017-01-14 18:37:02'),
+(3, 1, 'ponovo komentar', 'Pipi', '2017-01-14 18:37:41'),
+(4, 1, 'necu vise', 'Macak', '2017-01-14 18:37:41');
 
 -- --------------------------------------------------------
 
@@ -162,7 +174,7 @@ ALTER TABLE `vijesti`
 -- AUTO_INCREMENT for table `komentari`
 --
 ALTER TABLE `komentari`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `pregledauta`
 --

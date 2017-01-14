@@ -25,8 +25,14 @@
   }
 
 echo "<div class='comments'>
-    <div class='allComments'>
-    </div>
+    <div class='allComments'>";
+
+    $komentari = $veza->prepare("select autor, tekst from komentari where id_vijest = ".$id_niz[1]." order by vrijeme desc");
+    $komentari->execute();
+    foreach ($komentari as $k) {
+      echo "User: ".$k['autor']."<br>   Komentar: ".$k['tekst']."<br><br>";
+    }
+echo "</div>
     <div class='leaveComment'>
       <form class='formComment' name='formComment' onsubmit='return commentV();' method='post'>
         <div class='commentRow'>
