@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<news>
+  <container>
+    <id>vijest_1</id>
+    <img>pictures/goodyear.jpg</img>
+    <autor>Daki</autor>
+    <p> Testirali smo nove Goodyear gume za zimu</p>
+    <text>Primjer vijesti za "Testirali smo nove Goodyear gume za zimu"</text>
+  </container>
+  <container>
+    <id>vijest_2</id>
+    <img>pictures/AcuraNSX.jpg</img>
+    <autor>Daki</autor>
+    <p>Unisitli smo Acura NSX</p>
+    <text>Primjer vijesti za "Unistili smo Acura NSX"</text>
+  </container>
+  <container>
+    <id>vijest_3</id>
+    <img>pictures/Mazda3.jpg</img>
+    <autor>Daki</autor>
+    <p>Testirali smo novu Mazdu 3</p>
+    <text>Primjer vijesti za "Testirali smo novu Mazdu 3"</text>
+  </container>
+</news>

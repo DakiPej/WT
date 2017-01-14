@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="prijaviSe.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <title>Car Magazine</title>
+  </head>
+
+  <body>
+    <script type="text/javascript" src="prijaviSe.js"></script>
+
+
+    <div id="page">
+
+
+    <div class="top">
+      <img src="pictures/Wallpaper4.jpg"/>
+    </div>
+
+    <div class="menu">
+      <ul>
+        <li><a href="index.html">NOVOSTI</a></li>
+        <li><a href="pregledAuta.html">PREGLED AUTA</a></li>
+        <li><a href="info.html">INFO</a></li>
+        <li><a href="prijaviSe.html">PRIJAVI SE</a></li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <form name="signIn" class="signIn" method="post" action="">
+          <div class="label">
+            <label for="username">Korisnicko ime:</label><br>
+            <label for="lozinka">Lozinka: </label><br>
+          </div>
+
+          <div class="input">
+            <input id="username" type="text" name="username"><br>
+            <input id="lozinka" type="password" name="lozinka"><br>
+          </div>
+
+          <div class="button">
+            <div id="validation">
+
+            </div>
+            <input type="submit" value="Potvrdi" onclick="prijaviSe()">
+          </div>
+      </form>
+
+      <a href="uclaniSe.html">Kreirajte novi korisnički račun</a>
+
+    </div>
+    </div>
+  </body>
+</html>
