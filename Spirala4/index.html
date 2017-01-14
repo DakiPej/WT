@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <title>Car Magazine</title>
+    <style media="screen">
+      .demo{cursor: pointer;}
+    </style>
+  </head>
+  <body>
+    <script type="text/javascript" src="ucitajVijesti.js"></script>
+    <script type='text/javascript' src='obrisiMe.js'></script>
+    <script type='text/javascript' src='loadPage.js'></script>
+
+    <div id="page">
+
+    <div class="top">
+      <img src="pictures/Wallpaper1.jpg"/>
+    </div>
+
+    <div class="menu">
+      <ul>
+        <li><a href="index.html">NOVOSTI</a></li>
+        <li><a href="pregledAuta.html">PREGLED AUTA</a></li>
+        <li><a href="info.html">INFO</a></li>
+        <li><a href="prijaviSe.html">PRIJAVI SE</a></li>
+      </ul>
+    </div>
+    <center><a href="" onclick="odjaviSe()" style="font-size: 20px;">ODJAVA</a></center>
+    <div class = "vijestElement">
+
+    </div>
+    <div class="main" id="main">
+
+      <div class="hot">
+
+        <script type="text/javascript">
+          ucitajVijestiHot();
+        </script>
+      </div>
+
+      <div class="news">
+        <script type="text/javascript">
+          ucitajVijesti();
+        </script>
+      </div>
+    </div>
+    </div>
+
+  </body>
+</html>
